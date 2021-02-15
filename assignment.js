@@ -55,3 +55,22 @@ function hotelCost(days){
 // var result = hotelCost(21)
 // console.log(result);
 // expected output: 1850
+
+function megaFriend (friends) {
+    if(friends.length <= 0){
+        return 'Please Type Your Friends Name array'
+    }
+    var largeFriendName = [];
+    for (let i = 0; i < friends.length; i++) {
+        const element = friends[i];
+        if(element.length > largeFriendName.length){
+            largeFriendName = element;
+        }
+    }
+    return largeFriendName;
+
+}
+// var friendName = ['munna','tarek','shoagh']
+// var result = megaFriend(friendName)
+// console.log(result);
+// expected output: shoagh
