@@ -1,5 +1,6 @@
 //https://github.com/munnaSorder/assignment
 
+//Convert Kilometer To Meter
 function kilometerToMeter (km){
     if(km <= 0){
         return 'Sorry Your Number is not valid!.'
@@ -12,6 +13,7 @@ function kilometerToMeter (km){
 // console.log(result);
 // expected output : Sorry Your Number is not valid!.
 
+//Calculation Your Gadget Cost
 function budgetCalculator (watch, mobile, laptop){
     if(watch < 0 || mobile < 0 || laptop < 0){
         return 'Sorry Your Number is not valid';
@@ -28,27 +30,27 @@ function budgetCalculator (watch, mobile, laptop){
 // console.log(result);
 // expected output: 3000
 
+//Calculation Your Hotel Rent
 function hotelCost(days){
     if(days <=0 ){
         return 'Sorry Your Number is not valid';
     }
     else if(days <= 10){
-        var theInitialCost = days * 100;
-        return theInitialCost;
+        var initialCost = days * 100;
+        return initialCost;
     }
     else if(days <= 20){
         var currentDays = days - 10;
-        var theInitialCost = 10 * 100;
+        var initialCost = 10 * 100;
         var interMediateCost = currentDays * 80;
-        var totalCost = theInitialCost + interMediateCost;
+        var totalCost = initialCost + interMediateCost;
         return totalCost
-    }
-    else{
+    } else{
         var currentDays = days - 20;
-        var theInitialCost = 10 * 100;
+        var initialCost = 10 * 100;
         var interMediateCost = 10 * 80;
         var lastFewDaysCost = currentDays * 50;
-        var totalCost = theInitialCost + interMediateCost + lastFewDaysCost;
+        var totalCost = initialCost + interMediateCost + lastFewDaysCost;
         return totalCost;
     }
 }
@@ -56,15 +58,16 @@ function hotelCost(days){
 // console.log(result);
 // expected output: 1850
 
+//Find Your Larger Friend Name
 function megaFriend (friends) {
     if(friends.length <= 0){
         return 'Please Type Your Friends Name array'
     }
     var largeFriendName = [];
     for (let i = 0; i < friends.length; i++) {
-        const element = friends[i];
-        if(element.length > largeFriendName.length){
-            largeFriendName = element;
+        const friend = friends[i];
+        if(friend.length > largeFriendName.length){
+            largeFriendName = friend;
         }
     }
     return largeFriendName;
